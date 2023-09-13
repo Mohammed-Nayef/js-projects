@@ -1,24 +1,89 @@
-
-.count-down{
-    margin: 150px 0;
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    background-color: #f2f1ed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap:40px;
-    font-size:35px;
-    color: white;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
 }
-.count-down div{
-    background-color: rgb(109, 63, 236);
-    padding: 20px;
-    border-radius: 4px;
+h1{
+    font-size: 3em;
+    font-weight: lighter;
+    color: #de4848;
+    text-transform: uppercase;
+}
+.count-down{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2em;
+}
+/* .hours,.minutes,.seconds{
+} */
+h3{
+    text-align: center;
+    text-transform: uppercase;
+    color: #aaa;
+    font-weight: normal;
+}
+.flip-card{
+    font-size: 5em;
+    display: inline-block;
     position: relative;
-    font-weight: bold;
-    font-family: sans-serif;
+    margin:0 .02em;
+    box-shadow: 2px 2px 5px 0px #00000022;
+    border-radius: .125em;
+    perspective: 350px ;
 }
-.count-down div:not(:nth-child(1))::before{
+
+.top,.bottom,.top-half ,.half-bottom{
+    color: #de4848;
+    height: .75em;
+    line-height: 1;
+    padding:.25em .33em; 
+    font-weight: bold; 
+    overflow: hidden;    
+}
+.top,.top-half {
+    background-color: #f7f7f7;
+    border-top-left-radius: .125em;
+    border-top-right-radius: .125em;
+    border-bottom: 1px solid #00000011;
+}
+.bottom ,.half-bottom{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: flex-end;
+    border-bottom-left-radius: .125em;
+    border-bottom-right-radius: .125em;
+}
+.top-half{
     position: absolute;
-    left: -20px;
-    color:  rgb(109, 63, 236);
-    content: ':';
+    top: 0;
+    transform-origin: bottom;
+    animation:top-flip ease-in 700ms ;
+}
+.half-bottom{
+    position: absolute;
+    bottom: 0;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    animation: bottom-flip 700ms ease-out 700ms ;
+}
+
+@keyframes top-flip {
+    100%{
+        transform: rotateX(-90deg)
+    }
+}
+@keyframes bottom-flip {
+
+    100%{
+        transform: rotateX(0deg)
+    }
 }
