@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    padding: 0 16px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+body{
+    font-family: "indie flower" ,Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+/* Header */
+header{
+    text-align: center;
+    margin:  50px 0;
+}
+header h1{
+    margin-bottom: 0px;
+    line-height: 1;
+    
+}
+span{
+    font-weight: bold;
+}
+/* form */
