@@ -133,8 +133,8 @@ header h1 {
     text-decoration: line-through;
 }
 .todo-list .container ul li span.checkbox{
-    height: 1.1rem;
-    width: 1.1rem;
+    min-height: 1.1rem;
+    min-width: 1.1rem;
     border-radius: 3px;
     padding: 1px;
     cursor: pointer;
