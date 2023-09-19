@@ -22,7 +22,7 @@ simple widgets from what i've been learning recently in js ✨.
 - obviously it's not a good place to store notes but its ok for practicing, click [here](https://www.freecodecamp.org/news/how-to-store-objects-or-arrays-in-browser-local-storage/#:~:text=Local%20storage%20is%20useful%20for,out%20to%20the%20server%20for.) to see common local storage use cases
 - dont forgut to execute `loclaStorage.clear()`
 
-![todo list image](imgs/loclastorage-todo.png)
+![todo list image](imgs/localstorage-todo.png)
 
 
 
